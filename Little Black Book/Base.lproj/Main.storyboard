@@ -14,7 +14,7 @@
         <!--Your Little Black Book-->
         <scene sceneID="4jU-gi-4S9">
             <objects>
-                <tableViewController id="sVh-Vj-geF" sceneMemberID="viewController">
+                <tableViewController id="sVh-Vj-geF" customClass="ContactsByNameTableViewController" customModule="Little_Black_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5u8-Lp-iV2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
         <!--Add Contact-->
         <scene sceneID="aiZ-8S-s5g">
             <objects>
-                <viewController id="6RC-9G-hgH" sceneMemberID="viewController">
+                <viewController id="6RC-9G-hgH" customClass="AddContactInfoViewController" customModule="Little_Black_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yjm-YS-Gyq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -197,7 +197,7 @@
         <!--Meeting Info-->
         <scene sceneID="xcH-h9-SfC">
             <objects>
-                <viewController id="meT-7Y-JiT" sceneMemberID="viewController">
+                <viewController id="meT-7Y-JiT" customClass="AddMeetingInfoViewController" customModule="Little_Black_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="odg-4y-MjG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +290,7 @@
         <!--Meeting Details-->
         <scene sceneID="FaY-xA-a7j">
             <objects>
-                <viewController id="DDq-x0-12K" sceneMemberID="viewController">
+                <viewController id="DDq-x0-12K" customClass="AddMeetingDetailsViewController" customModule="Little_Black_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S8l-le-axQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -335,7 +335,7 @@
         <!--Contact Detail-->
         <scene sceneID="g1z-Zo-4EB">
             <objects>
-                <viewController id="Zqz-SE-ooY" sceneMemberID="viewController">
+                <viewController id="Zqz-SE-ooY" customClass="ContactDetailViewController" customModule="Little_Black_Book" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wbo-Sg-WBG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
