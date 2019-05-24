@@ -16,7 +16,12 @@ class AddMeetingDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func doneWritingNotes(_ sender: Any) {
+        // save/complete meeting record object
+        
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -26,5 +31,9 @@ class AddMeetingDetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBOutlet weak var prompt1TExtView: UITextView!
+    
 
+    @IBOutlet weak var prompt1TextField: UILabel!
 }

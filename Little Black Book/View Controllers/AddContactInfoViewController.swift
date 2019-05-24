@@ -16,15 +16,44 @@ class AddContactInfoViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
+    @IBAction func chooseContactMethod(_ sender: Any) {
+        // save contact name?
+        
+        // reveal buttons
+    }
+    
+    @IBAction func showEmailField(_ sender: Any) {
+    }
+    
+    @IBAction func showTwitterField(_ sender: Any) {
+    }
+    
+    @IBAction func showPhoneField(_ sender: Any) {
+    }
+    
+    @IBAction func showPhysicalAddressField(_ sender: Any) {
+    }
+    
+    @IBAction func showAllFields(_ sender: Any) {
+    }
+    
+    @IBAction func continueToNextVC(_ sender: Any) {
+        // create new Contact from contactController
+    }
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        // pass relevant controllers to next VC
     }
-    */
-
+    
+    // MARK: - Properties
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var emailAddressField: UITextField!
+    @IBOutlet weak var twitterHandleField: UITextField!
+    @IBOutlet weak var phoneNumberField: UITextField!
+    @IBOutlet weak var physicalAddressField: UITextField!
+    
+    
 }

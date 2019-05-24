@@ -80,10 +80,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXz-P6-CbR">
                                         <rect key="frame" x="0.0" y="30" width="382" height="30"/>
                                         <state key="normal" title="Choose Contact Method"/>
+                                        <connections>
+                                            <action selector="chooseContactMethod:" destination="6RC-9G-hgH" eventType="touchUpInside" id="s4m-VL-dm7"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rye-JG-uXf">
                                         <rect key="frame" x="0.0" y="60" width="382" height="30"/>
                                         <state key="normal" title="Enter Email"/>
+                                        <connections>
+                                            <action selector="showEmailField:" destination="6RC-9G-hgH" eventType="touchUpInside" id="Deq-94-736"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="vL5-Zx-fQn">
                                         <rect key="frame" x="0.0" y="90" width="382" height="30"/>
@@ -105,6 +111,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="go0-0M-coH">
                                         <rect key="frame" x="0.0" y="120" width="382" height="30"/>
                                         <state key="normal" title="Enter Twitter"/>
+                                        <connections>
+                                            <action selector="showTwitterField:" destination="6RC-9G-hgH" eventType="touchUpInside" id="naz-rP-3sZ"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RrF-MA-0yC">
                                         <rect key="frame" x="0.0" y="150" width="382" height="30"/>
@@ -126,6 +135,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1c-Dh-OUt">
                                         <rect key="frame" x="0.0" y="180" width="382" height="30"/>
                                         <state key="normal" title="Enter Phone"/>
+                                        <connections>
+                                            <action selector="showPhoneField:" destination="6RC-9G-hgH" eventType="touchUpInside" id="ry9-N8-joC"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sin-Bt-pYY">
                                         <rect key="frame" x="0.0" y="210" width="382" height="30"/>
@@ -147,6 +159,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4J-aN-e05">
                                         <rect key="frame" x="0.0" y="240" width="382" height="30"/>
                                         <state key="normal" title="Enter Address"/>
+                                        <connections>
+                                            <action selector="showPhysicalAddressField:" destination="6RC-9G-hgH" eventType="touchUpInside" id="t7W-xw-sDx"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bwY-PT-jQw">
                                         <rect key="frame" x="0.0" y="270" width="382" height="30"/>
@@ -168,11 +183,15 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmD-je-uoy">
                                         <rect key="frame" x="0.0" y="300" width="382" height="30"/>
                                         <state key="normal" title="Business Card (Show All)"/>
+                                        <connections>
+                                            <action selector="showAllFields:" destination="6RC-9G-hgH" eventType="touchUpInside" id="OUZ-fd-lMe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJk-Q3-azR">
                                         <rect key="frame" x="0.0" y="330" width="382" height="380"/>
                                         <state key="normal" title="Continue"/>
                                         <connections>
+                                            <action selector="continueToNextVC:" destination="6RC-9G-hgH" eventType="touchUpInside" id="k03-Lm-QV9"/>
                                             <segue destination="meT-7Y-JiT" kind="show" id="eac-uJ-KNK"/>
                                         </connections>
                                     </button>
@@ -189,6 +208,13 @@
                         <viewLayoutGuide key="safeArea" id="iH0-tf-V79"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Contact" id="ire-by-XCp"/>
+                    <connections>
+                        <outlet property="emailAddressField" destination="Voz-fb-Nao" id="ztb-ee-IEm"/>
+                        <outlet property="nameField" destination="Q0C-T8-AH9" id="UBd-ty-r5Z"/>
+                        <outlet property="phoneNumberField" destination="pkO-j6-7PL" id="DTp-XO-4DO"/>
+                        <outlet property="physicalAddressField" destination="MPy-Qh-bZa" id="blc-GM-LSv"/>
+                        <outlet property="twitterHandleField" destination="SYc-Fm-gI9" id="fHF-1X-Wgm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He7-Yb-eSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,6 +249,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTq-jo-Vbg">
                                                 <rect key="frame" x="329" y="0.0" width="53" height="30"/>
                                                 <state key="normal" title="Change"/>
+                                                <connections>
+                                                    <action selector="changeMeetingCategory:" destination="meT-7Y-JiT" eventType="touchUpInside" id="aGc-9v-m0d"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -266,6 +295,7 @@
                                         <rect key="frame" x="0.0" y="280" width="382" height="446"/>
                                         <state key="normal" title="Continue"/>
                                         <connections>
+                                            <action selector="continueToNextVC:" destination="meT-7Y-JiT" eventType="touchUpInside" id="ml2-wY-A9N"/>
                                             <segue destination="DDq-x0-12K" kind="show" id="w2Y-Nr-nfM"/>
                                         </connections>
                                     </button>
@@ -313,6 +343,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJc-at-jOf">
                                         <rect key="frame" x="0.0" y="696" width="382" height="30"/>
                                         <state key="normal" title="Done"/>
+                                        <connections>
+                                            <action selector="doneWritingNotes:" destination="DDq-x0-12K" eventType="touchUpInside" id="ScM-6W-Cg0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -327,6 +360,10 @@
                         <viewLayoutGuide key="safeArea" id="G3W-q5-zze"/>
                     </view>
                     <navigationItem key="navigationItem" title="Meeting Details" id="ZMj-Ss-gM2"/>
+                    <connections>
+                        <outlet property="prompt1TExtView" destination="Ys7-ud-fPY" id="bC8-Gl-hde"/>
+                        <outlet property="prompt1TextField" destination="5qT-HU-62t" id="cdl-9S-BTh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yv-BQ-Zh4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
