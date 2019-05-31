@@ -9,12 +9,12 @@
 import Foundation
 import Photos
 
-struct Contact {
+struct Contact: Encodable {
     var name: String
     var company: String?
     var roleOrField: String?
     var hobby: String?
-    var picture: UIImage?
+//    var picture: UIImage?
     
     var emailAddress: String?
     var phoneNumber: String?

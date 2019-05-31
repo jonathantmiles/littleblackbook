@@ -15,7 +15,7 @@ class ContactController {
     func createNewContact(name: String, company: String, roleOrField: String, hobby: String, picture: UIImage, emailAddress: String, phoneNumber: String, twitterHandle: String, physicalAddress: String) {
         
         // TODO: must be able to handle blank fields
-        let contact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, picture: picture, emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
+        let contact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, /*picture: picture, */emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
         
         contacts.append(contact)
         
@@ -27,7 +27,7 @@ class ContactController {
     func updateContact(contact: Contact, name: String, company: String, roleOrField: String, hobby: String, picture: UIImage, emailAddress: String, phoneNumber: String, twitterHandle: String, physicalAddress: String) {
         
         // TODO: must be able to handle blank fields
-        let newContact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, picture: picture, emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
+        let newContact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, /*picture: picture, */emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
         
         let contactIndex = contacts.firstIndex { (contact) -> Bool in
             fatalError("Error with finding element in read array")
@@ -49,10 +49,30 @@ class ContactController {
         // again -- does this work, actually? hashValue and the throwing firstIndex
     }
     
+    // MARK: - Persistence
+    
+    private func saveToPersistentStore() {
+        guard let url = contactListURL else { return }
+        
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(contacts)
+            try data.write(to: url)
+        } catch {
+            NSLog("Contacts not encoded: \(error)")
+        }
+    }
+    
     // MARK: - Properties
     
     // Read
     var contacts: [Contact] = []
+    
+    private var contactListURL: URL? {
+        let fm = FileManager.default
+        guard let documentsDir = fm.urls(for: .documentDirectory, in: .userDomainMask).first else { return nil }
+        return documentsDir.appendingPathComponent("ContactList.plist")
+    }
     
     // TODO: must be superceded by load/save functions
 }
