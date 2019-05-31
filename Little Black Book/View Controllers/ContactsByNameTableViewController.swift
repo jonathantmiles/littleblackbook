@@ -10,16 +10,14 @@ import UIKit
 
 class ContactsByNameTableViewController: UITableViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    // MARK: - Life Cycle methods
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateViews()
     }
-
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +44,13 @@ class ContactsByNameTableViewController: UITableViewController {
         destVC.contactController = self.contactController
     }
     
-    // MARK : - Properties
+    // MARK: - Private
+    
+    private func updateViews() {
+        tableView.reloadData()
+    }
+    
+    // MARK: - Properties
     
     let contactController = ContactController()
 

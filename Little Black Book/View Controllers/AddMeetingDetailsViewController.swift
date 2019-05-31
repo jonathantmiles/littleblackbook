@@ -38,6 +38,6 @@ class AddMeetingDetailsViewController: UIViewController {
     
     var contactController: ContactController?
     
-    @IBOutlet weak var prompt1TextView: UITextView!
+    @IBOutlet weak var prompt1TExtView: UITextView!
     @IBOutlet weak var prompt1TextField: UILabel!
 }
