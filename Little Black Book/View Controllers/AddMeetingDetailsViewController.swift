@@ -19,6 +19,8 @@ class AddMeetingDetailsViewController: UIViewController {
     @IBAction func doneWritingNotes(_ sender: Any) {
         // save/complete meeting record object
         
+        // only needs saving methods; that should let the main contactController still find records from plist saving
+        
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -32,8 +34,10 @@ class AddMeetingDetailsViewController: UIViewController {
     }
     */
     
-    @IBOutlet weak var prompt1TExtView: UITextView!
+    // MARK: - Properties
     
-
+    var contactController: ContactController?
+    
+    @IBOutlet weak var prompt1TextView: UITextView!
     @IBOutlet weak var prompt1TextField: UILabel!
 }

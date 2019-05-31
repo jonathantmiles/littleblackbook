@@ -18,7 +18,10 @@ class AddContactInfoViewController: UIViewController {
     
     @IBAction func chooseContactMethod(_ sender: Any) {
         // save contact name?
+        guard let contactController = contactController,
+            let name = nameField.text else { return }
         
+        contactController.createNewContact(name: name, company: nil, roleOrField: nil, hobby: nil, emailAddress: nil, phoneNumber: nil, twitterHandle: nil, physicalAddress: nil)
         // reveal buttons
     }
     
@@ -46,9 +49,15 @@ class AddContactInfoViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         // pass relevant controllers to next VC
+        guard let destVC = segue.destination as? AddMeetingInfoViewController else { return }
+        
+        destVC.contactController = contactController
     }
     
     // MARK: - Properties
+    
+    var contactController: ContactController?
+    
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailAddressField: UITextField!
     @IBOutlet weak var twitterHandleField: UITextField!

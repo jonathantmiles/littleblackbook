@@ -33,14 +33,18 @@ class AddMeetingInfoViewController: UIViewController {
         // these functions may not need to exist; put all their code in the prepare(for segue:)
     }
     
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let destVC = segue.destination as? AddMeetingDetailsViewController else { return }
+        
+        destVC.contactController = self.contactController
     }
-    */
+
+    
+    // MARK : - Properties
+    
+    var contactController: ContactController?
 
 }

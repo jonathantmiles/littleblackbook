@@ -19,7 +19,7 @@ class ContactController {
     
     // MARK: - C_UD
     
-    func createNewContact(name: String, company: String, roleOrField: String, hobby: String, picture: UIImage, emailAddress: String, phoneNumber: String, twitterHandle: String, physicalAddress: String) {
+    func createNewContact(name: String, company: String?, roleOrField: String?, hobby: String?, /*picture: UIImage?, */emailAddress: String?, phoneNumber: String?, twitterHandle: String?, physicalAddress: String?) {
         
         // TODO: must be able to handle blank fields
         let contact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, /*picture: picture, */emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
@@ -29,7 +29,7 @@ class ContactController {
         saveToPersistentStore()
     }
     
-    func updateContact(contact: Contact, name: String, company: String, roleOrField: String, hobby: String, picture: UIImage, emailAddress: String, phoneNumber: String, twitterHandle: String, physicalAddress: String) {
+    func updateContact(contact: Contact, name: String, company: String?, roleOrField: String?, hobby: String?, /*picture: UIImage?, */emailAddress: String?, phoneNumber: String?, twitterHandle: String?, physicalAddress: String?) {
         
         // TODO: must be able to handle blank fields
         let newContact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, /*picture: picture, */emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
@@ -85,7 +85,6 @@ class ContactController {
     
     // MARK: - Properties
     
-    // Read
     var contacts: [Contact] = []
     
     private var contactListURL: URL? {
@@ -94,5 +93,4 @@ class ContactController {
         return documentsDir.appendingPathComponent("ContactList.plist")
     }
     
-    // TODO: must be superceded by load/save functions
 }
