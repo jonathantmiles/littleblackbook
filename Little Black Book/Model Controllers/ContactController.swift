@@ -11,7 +11,14 @@ import UIKit
 
 class ContactController {
     
-    // Create
+    // MARK: - Life Cycle
+    
+    init() {
+        loadFromPersistentStore()
+    }
+    
+    // MARK: - C_UD
+    
     func createNewContact(name: String, company: String, roleOrField: String, hobby: String, picture: UIImage, emailAddress: String, phoneNumber: String, twitterHandle: String, physicalAddress: String) {
         
         // TODO: must be able to handle blank fields
@@ -19,10 +26,8 @@ class ContactController {
         
         contacts.append(contact)
         
-        // save
+        saveToPersistentStore()
     }
-    
-    // Update
     
     func updateContact(contact: Contact, name: String, company: String, roleOrField: String, hobby: String, picture: UIImage, emailAddress: String, phoneNumber: String, twitterHandle: String, physicalAddress: String) {
         
@@ -37,9 +42,9 @@ class ContactController {
         contacts.insert(newContact, at: contactIndex.hashValue)
         
         // TODO: consider editing properties directly, e.g. contacts[index].company = "newCompany" ; I know there's some trick to it, supposedly
+        
+        saveToPersistentStore()
     }
-    
-    // Delete
     
     func deleteContact(contact: Contact) {
         let contactIndex = contacts.firstIndex { (contact) -> Bool in
@@ -47,6 +52,8 @@ class ContactController {
         }
         contacts.remove(at: contactIndex.hashValue)
         // again -- does this work, actually? hashValue and the throwing firstIndex
+        
+        saveToPersistentStore()
     }
     
     // MARK: - Persistence
@@ -60,6 +67,19 @@ class ContactController {
             try data.write(to: url)
         } catch {
             NSLog("Contacts not encoded: \(error)")
+        }
+    }
+    
+    private func loadFromPersistentStore() {
+        let fm = FileManager.default
+        guard let url = contactListURL, fm.fileExists(atPath: url.path) else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            let decodedContacts = try decoder.decode([Contact].self, from: data)
+            contacts = decodedContacts
+        } catch {
+            NSLog("Contacts not decoded: \(error)")
         }
     }
     

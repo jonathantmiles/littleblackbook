@@ -9,7 +9,7 @@
 import Foundation
 import Photos
 
-struct Contact: Encodable {
+struct Contact: Codable {
     var name: String
     var company: String?
     var roleOrField: String?
