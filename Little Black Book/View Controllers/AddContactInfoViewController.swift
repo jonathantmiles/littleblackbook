@@ -26,18 +26,22 @@ class AddContactInfoViewController: UIViewController {
     
     @IBAction func showEmailField(_ sender: Any) {
         emailStackView.isHidden = false
+        hideContactButtons()
     }
     
     @IBAction func showTwitterField(_ sender: Any) {
         twitterStackView.isHidden = false
+        hideContactButtons()
     }
     
     @IBAction func showPhoneField(_ sender: Any) {
         phoneStackView.isHidden = false
+        hideContactButtons()
     }
     
     @IBAction func showPhysicalAddressField(_ sender: Any) {
         addressStackView.isHidden = false
+        hideContactButtons()
     }
     
     @IBAction func showAllFields(_ sender: Any) {
@@ -45,6 +49,8 @@ class AddContactInfoViewController: UIViewController {
         twitterStackView.isHidden = false
         phoneStackView.isHidden = false
         addressStackView.isHidden = false
+        hideContactButtons()
+        showAllBusinessCardButton.isHidden = false
     }
     
     @IBAction func continueToNextVC(_ sender: Any) {
@@ -83,6 +89,14 @@ class AddContactInfoViewController: UIViewController {
         enterPhone.isHidden = false
         enterAddressButton.isHidden = false
         showAllBusinessCardButton.isHidden = false
+    }
+    
+    private func hideContactButtons() {
+        enterEmailButton.isHidden = true
+        enterTwitter.isHidden = true
+        enterPhone.isHidden = true
+        enterAddressButton.isHidden = true
+        showAllBusinessCardButton.titleLabel?.text = "Show Other Contacts"
     }
     
     // MARK: - Properties
