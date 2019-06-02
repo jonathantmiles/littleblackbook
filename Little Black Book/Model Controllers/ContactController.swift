@@ -85,6 +85,7 @@ class ContactController {
     
     // MARK: - Properties
     
+    var currentContact: Contact?
     var contacts: [Contact] = []
     
     private var contactListURL: URL? {

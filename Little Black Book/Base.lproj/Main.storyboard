@@ -189,7 +189,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJk-Q3-azR">
                                         <rect key="frame" x="0.0" y="330" width="382" height="380"/>
-                                        <state key="normal" title="Continue"/>
+                                        <state key="normal" title="Save Contact and Continue"/>
                                         <connections>
                                             <action selector="continueToNextVC:" destination="6RC-9G-hgH" eventType="touchUpInside" id="k03-Lm-QV9"/>
                                             <segue destination="meT-7Y-JiT" kind="show" id="eac-uJ-KNK"/>
@@ -216,6 +216,7 @@
                     <navigationItem key="navigationItem" title="Add Contact" id="ire-by-XCp"/>
                     <connections>
                         <outlet property="addressStackView" destination="bwY-PT-jQw" id="NHb-T5-4qL"/>
+                        <outlet property="chooseContactMethodButton" destination="AXz-P6-CbR" id="Meh-BI-dVB"/>
                         <outlet property="emailAddressField" destination="Voz-fb-Nao" id="ztb-ee-IEm"/>
                         <outlet property="emailStackView" destination="vL5-Zx-fQn" id="RWh-q6-Zk5"/>
                         <outlet property="enterAddressButton" destination="r4J-aN-e05" id="CJR-aB-cjh"/>

@@ -17,11 +17,8 @@ class AddContactInfoViewController: UIViewController {
     }
     
     @IBAction func chooseContactMethod(_ sender: Any) {
-        guard let contactController = contactController,
-            let name = nameField.text else { return }
-        
-        contactController.createNewContact(name: name, company: nil, roleOrField: nil, hobby: nil, emailAddress: nil, phoneNumber: nil, twitterHandle: nil, physicalAddress: nil)
         revealContactOptions()
+        chooseContactMethodButton.isHidden = true
     }
     
     @IBAction func showEmailField(_ sender: Any) {
@@ -64,6 +61,16 @@ class AddContactInfoViewController: UIViewController {
         // pass relevant controllers to next VC
         guard let destVC = segue.destination as? AddMeetingInfoViewController else { return }
         
+        // make a new contact; unwrapping sets values to ""
+        guard let contactController = contactController,
+            let name = nameField.text,
+            let emailAddress = emailAddressField.text,
+            let twitterHandle = twitterHandleField.text,
+            let phoneNumber = phoneNumberField.text,
+            let physicalAddress = physicalAddressField.text else { return }
+        
+        contactController.createNewContact(name: name, company: nil, roleOrField: nil, hobby: nil, emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
+        
         destVC.contactController = contactController
     }
     
@@ -101,6 +108,7 @@ class AddContactInfoViewController: UIViewController {
     
     // MARK: - Properties
     
+//    var contact: Contact?
     var contactController: ContactController?
     
     // TextField Outlets
@@ -111,7 +119,7 @@ class AddContactInfoViewController: UIViewController {
     @IBOutlet weak var physicalAddressField: UITextField!
     
     // Button Outlets
-    
+    @IBOutlet weak var chooseContactMethodButton: UIButton!
     @IBOutlet weak var enterEmailButton: UIButton!
     @IBOutlet weak var enterTwitter: UIButton!
     @IBOutlet weak var enterPhone: UIButton!
