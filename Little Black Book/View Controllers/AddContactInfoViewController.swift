@@ -10,34 +10,41 @@ import UIKit
 
 class AddContactInfoViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupHideElements()
     }
     
     @IBAction func chooseContactMethod(_ sender: Any) {
-        // save contact name?
         guard let contactController = contactController,
             let name = nameField.text else { return }
         
         contactController.createNewContact(name: name, company: nil, roleOrField: nil, hobby: nil, emailAddress: nil, phoneNumber: nil, twitterHandle: nil, physicalAddress: nil)
-        // reveal buttons
+        revealContactOptions()
     }
     
     @IBAction func showEmailField(_ sender: Any) {
+        emailStackView.isHidden = false
     }
     
     @IBAction func showTwitterField(_ sender: Any) {
+        twitterStackView.isHidden = false
     }
     
     @IBAction func showPhoneField(_ sender: Any) {
+        phoneStackView.isHidden = false
     }
     
     @IBAction func showPhysicalAddressField(_ sender: Any) {
+        addressStackView.isHidden = false
     }
     
     @IBAction func showAllFields(_ sender: Any) {
+        emailStackView.isHidden = false
+        twitterStackView.isHidden = false
+        phoneStackView.isHidden = false
+        addressStackView.isHidden = false
     }
     
     @IBAction func continueToNextVC(_ sender: Any) {
@@ -54,15 +61,53 @@ class AddContactInfoViewController: UIViewController {
         destVC.contactController = contactController
     }
     
+    // MARK: - Helpers and Algorithms
+    
+    private func setupHideElements() {
+        emailStackView.isHidden = true
+        twitterStackView.isHidden = true
+        phoneStackView.isHidden = true
+        addressStackView.isHidden  = true
+        
+        enterEmailButton.isHidden = true
+        enterTwitter.isHidden = true
+        enterPhone.isHidden = true
+        enterAddressButton.isHidden = true
+        showAllBusinessCardButton.isHidden = true
+    }
+    
+    private func revealContactOptions() {
+        // possible animation to stagger these so they cascade down
+        enterEmailButton.isHidden = false
+        enterTwitter.isHidden = false
+        enterPhone.isHidden = false
+        enterAddressButton.isHidden = false
+        showAllBusinessCardButton.isHidden = false
+    }
+    
     // MARK: - Properties
     
     var contactController: ContactController?
     
+    // TextField Outlets
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailAddressField: UITextField!
     @IBOutlet weak var twitterHandleField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
     @IBOutlet weak var physicalAddressField: UITextField!
     
+    // Button Outlets
+    
+    @IBOutlet weak var enterEmailButton: UIButton!
+    @IBOutlet weak var enterTwitter: UIButton!
+    @IBOutlet weak var enterPhone: UIButton!
+    @IBOutlet weak var enterAddressButton: UIButton!
+    @IBOutlet weak var showAllBusinessCardButton: UIButton!
+    
+    // Stack Views
+    @IBOutlet weak var emailStackView: UIStackView!
+    @IBOutlet weak var twitterStackView: UIStackView!
+    @IBOutlet weak var phoneStackView: UIStackView!
+    @IBOutlet weak var addressStackView: UIStackView!
     
 }

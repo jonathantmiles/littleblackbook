@@ -64,13 +64,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcO-Al-sF6">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q0C-T8-AH9">
-                                                <rect key="frame" x="58" y="0.0" width="324" height="30"/>
+                                                <rect key="frame" x="80" y="0.0" width="302" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -95,13 +95,13 @@
                                         <rect key="frame" x="0.0" y="90" width="382" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5po-Wf-JoZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Voz-fb-Nao">
-                                                <rect key="frame" x="58" y="0.0" width="324" height="30"/>
+                                                <rect key="frame" x="80" y="0.0" width="302" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -119,13 +119,13 @@
                                         <rect key="frame" x="0.0" y="150" width="382" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pSp-H5-j9F">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYc-Fm-gI9">
-                                                <rect key="frame" x="70" y="0.0" width="312" height="30"/>
+                                                <rect key="frame" x="80" y="0.0" width="302" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -143,13 +143,13 @@
                                         <rect key="frame" x="0.0" y="210" width="382" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yw9-4L-YzD">
-                                                <rect key="frame" x="0.0" y="0.0" width="53.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pkO-j6-7PL">
-                                                <rect key="frame" x="61.5" y="0.0" width="320.5" height="30"/>
+                                                <rect key="frame" x="80" y="0.0" width="302" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -196,6 +196,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="Wcn-am-3tv" firstAttribute="width" secondItem="pSp-H5-j9F" secondAttribute="width" id="4IU-3o-fSh"/>
+                                    <constraint firstItem="Wcn-am-3tv" firstAttribute="width" secondItem="OcO-Al-sF6" secondAttribute="width" id="NGU-OJ-osS"/>
+                                    <constraint firstItem="Wcn-am-3tv" firstAttribute="width" secondItem="Yw9-4L-YzD" secondAttribute="width" id="szr-wv-QuI"/>
+                                    <constraint firstItem="Wcn-am-3tv" firstAttribute="width" secondItem="5po-Wf-JoZ" secondAttribute="width" id="utz-51-X5Y"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -209,11 +215,20 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Contact" id="ire-by-XCp"/>
                     <connections>
+                        <outlet property="addressStackView" destination="bwY-PT-jQw" id="NHb-T5-4qL"/>
                         <outlet property="emailAddressField" destination="Voz-fb-Nao" id="ztb-ee-IEm"/>
+                        <outlet property="emailStackView" destination="vL5-Zx-fQn" id="RWh-q6-Zk5"/>
+                        <outlet property="enterAddressButton" destination="r4J-aN-e05" id="CJR-aB-cjh"/>
+                        <outlet property="enterEmailButton" destination="Rye-JG-uXf" id="Vcw-F0-h3l"/>
+                        <outlet property="enterPhone" destination="b1c-Dh-OUt" id="USt-zf-Rn2"/>
+                        <outlet property="enterTwitter" destination="go0-0M-coH" id="Yig-sV-pxM"/>
                         <outlet property="nameField" destination="Q0C-T8-AH9" id="UBd-ty-r5Z"/>
                         <outlet property="phoneNumberField" destination="pkO-j6-7PL" id="DTp-XO-4DO"/>
+                        <outlet property="phoneStackView" destination="sin-Bt-pYY" id="yEF-p1-pzQ"/>
                         <outlet property="physicalAddressField" destination="MPy-Qh-bZa" id="blc-GM-LSv"/>
+                        <outlet property="showAllBusinessCardButton" destination="VmD-je-uoy" id="bAd-j2-Tpz"/>
                         <outlet property="twitterHandleField" destination="SYc-Fm-gI9" id="fHF-1X-Wgm"/>
+                        <outlet property="twitterStackView" destination="RrF-MA-0yC" id="Tfe-KH-2MG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="He7-Yb-eSz" userLabel="First Responder" sceneMemberID="firstResponder"/>
