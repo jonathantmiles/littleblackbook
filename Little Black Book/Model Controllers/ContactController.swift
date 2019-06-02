@@ -19,11 +19,12 @@ class ContactController {
     
     // MARK: - C_UD
     
+    /// Creates new contact, inserts it into the read array, sets currentContact property to this contact, and saves to plist.
     func createNewContact(name: String, company: String?, roleOrField: String?, hobby: String?, /*picture: UIImage?, */emailAddress: String?, phoneNumber: String?, twitterHandle: String?, physicalAddress: String?) {
         
-        // TODO: must be able to handle blank fields
         let contact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, /*picture: picture, */emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
         
+        currentContact = contact
         contacts.append(contact)
         
         saveToPersistentStore()
@@ -31,11 +32,10 @@ class ContactController {
     
     func updateContact(contact: Contact, name: String, company: String?, roleOrField: String?, hobby: String?, /*picture: UIImage?, */emailAddress: String?, phoneNumber: String?, twitterHandle: String?, physicalAddress: String?) {
         
-        // TODO: must be able to handle blank fields
         let newContact = Contact(name: name, company: company, roleOrField: roleOrField, hobby: hobby, /*picture: picture, */emailAddress: emailAddress, phoneNumber: phoneNumber, twitterHandle: twitterHandle, physicalAddress: physicalAddress)
         
         let contactIndex = contacts.firstIndex { (contact) -> Bool in
-            fatalError("Error with finding element in read array")
+            fatalError("Error with finding contact element in read array")
         }
         
         contacts.remove(at: contactIndex.hashValue) // does this work?

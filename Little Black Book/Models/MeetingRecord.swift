@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Meeting {
+struct MeetingRecord: Codable {
     var associatedContact: Contact
     var location: String // maps/location data object?
     var date: String // Date type?

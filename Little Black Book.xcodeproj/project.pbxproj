@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		F83A47792295FD6F006587DF /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A47782295FD6F006587DF /* Contact.swift */; };
-		F83A477D2295FEA4006587DF /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A477C2295FEA4006587DF /* Meeting.swift */; };
+		F83A477D2295FEA4006587DF /* MeetingRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A477C2295FEA4006587DF /* MeetingRecord.swift */; };
 		F83A478022961C48006587DF /* AddContactInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A477F22961C48006587DF /* AddContactInfoViewController.swift */; };
 		F83A478222961C69006587DF /* AddMeetingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A478122961C69006587DF /* AddMeetingInfoViewController.swift */; };
 		F83A478422961C80006587DF /* AddMeetingDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A478322961C80006587DF /* AddMeetingDetailsViewController.swift */; };
 		F83A478622961CAA006587DF /* ContactsByNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A478522961CAA006587DF /* ContactsByNameTableViewController.swift */; };
 		F83A478822961D39006587DF /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A478722961D39006587DF /* ContactDetailViewController.swift */; };
 		F83A478B2297B483006587DF /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A478A2297B483006587DF /* ContactController.swift */; };
+		F888D25122A3712700DADBDA /* MeetingRecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F888D25022A3712700DADBDA /* MeetingRecordController.swift */; };
 		F8983E422295060200A87100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8983E412295060200A87100 /* AppDelegate.swift */; };
 		F8983E472295060200A87100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8983E452295060200A87100 /* Main.storyboard */; };
 		F8983E492295060300A87100 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8983E482295060300A87100 /* Assets.xcassets */; };
@@ -23,13 +24,14 @@
 
 /* Begin PBXFileReference section */
 		F83A47782295FD6F006587DF /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		F83A477C2295FEA4006587DF /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		F83A477C2295FEA4006587DF /* MeetingRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRecord.swift; sourceTree = "<group>"; };
 		F83A477F22961C48006587DF /* AddContactInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactInfoViewController.swift; sourceTree = "<group>"; };
 		F83A478122961C69006587DF /* AddMeetingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetingInfoViewController.swift; sourceTree = "<group>"; };
 		F83A478322961C80006587DF /* AddMeetingDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeetingDetailsViewController.swift; sourceTree = "<group>"; };
 		F83A478522961CAA006587DF /* ContactsByNameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsByNameTableViewController.swift; sourceTree = "<group>"; };
 		F83A478722961D39006587DF /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		F83A478A2297B483006587DF /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		F888D25022A3712700DADBDA /* MeetingRecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingRecordController.swift; sourceTree = "<group>"; };
 		F8983E3E2295060200A87100 /* Little Black Book.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Black Book.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8983E412295060200A87100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8983E462295060200A87100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -53,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				F83A47782295FD6F006587DF /* Contact.swift */,
-				F83A477C2295FEA4006587DF /* Meeting.swift */,
+				F83A477C2295FEA4006587DF /* MeetingRecord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				F83A478A2297B483006587DF /* ContactController.swift */,
+				F888D25022A3712700DADBDA /* MeetingRecordController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -182,10 +185,11 @@
 			files = (
 				F83A47792295FD6F006587DF /* Contact.swift in Sources */,
 				F83A478422961C80006587DF /* AddMeetingDetailsViewController.swift in Sources */,
+				F888D25122A3712700DADBDA /* MeetingRecordController.swift in Sources */,
 				F83A478022961C48006587DF /* AddContactInfoViewController.swift in Sources */,
 				F83A478622961CAA006587DF /* ContactsByNameTableViewController.swift in Sources */,
 				F83A478222961C69006587DF /* AddMeetingInfoViewController.swift in Sources */,
-				F83A477D2295FEA4006587DF /* Meeting.swift in Sources */,
+				F83A477D2295FEA4006587DF /* MeetingRecord.swift in Sources */,
 				F83A478822961D39006587DF /* ContactDetailViewController.swift in Sources */,
 				F8983E422295060200A87100 /* AppDelegate.swift in Sources */,
 				F83A478B2297B483006587DF /* ContactController.swift in Sources */,
